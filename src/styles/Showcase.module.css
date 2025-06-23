@@ -1,0 +1,48 @@
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 164px;
+}
+
+.containerTextPressure {
+    height: 264px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.containerProjects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+    /* grid */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(264px, 1fr));
+}
+
+.card {
+    height: 124px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #111111;
+    border: 1px solid #222;
+
+    padding: 8px 16px;
+    background-image: linear-gradient(175deg, #111111 60%, rgb(24, 24, 59));
+    box-shadow: 0px 5px 5px #111111;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .card:hover {}
+}

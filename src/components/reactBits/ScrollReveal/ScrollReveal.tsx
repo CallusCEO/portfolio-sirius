@@ -22,7 +22,7 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
   children,
   scrollContainerRef,
   enableBlur = true,
-  baseOpacity = 0.1,
+  baseOpacity = 0,
   baseRotation = 3,
   blurStrength = 4,
   containerClassName = "",
@@ -57,14 +57,14 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
       el,
       { transformOrigin: "0% 50%", rotate: baseRotation },
       {
-        ease: "none",
+        ease: "power1.inOut",
         rotate: 0,
         scrollTrigger: {
           trigger: el,
           scroller,
           start: "top bottom",
           end: rotationEnd,
-          scrub: true,
+          scrub: 1,
         },
       },
     );
@@ -75,15 +75,15 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
       wordElements,
       { opacity: baseOpacity, willChange: "opacity" },
       {
-        ease: "none",
+        ease: "power1.inOut",
         opacity: 1,
         stagger: 0.05,
         scrollTrigger: {
           trigger: el,
           scroller,
-          start: "top bottom-=20%",
+          start: "top bottom-=40%",
           end: wordAnimationEnd,
-          scrub: true,
+          scrub: 1,
         },
       },
     );
@@ -93,15 +93,15 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
         wordElements,
         { filter: `blur(${blurStrength}px)` },
         {
-          ease: "none",
+          ease: "power1.inOut",
           filter: "blur(0px)",
           stagger: 0.05,
           scrollTrigger: {
             trigger: el,
             scroller,
-            start: "top bottom-=20%",
+            start: "top bottom-=50%",
             end: wordAnimationEnd,
-            scrub: true,
+            scrub: 1,
           },
         },
       );

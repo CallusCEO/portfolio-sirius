@@ -1,0 +1,12 @@
+.containerAbout {
+    width: 100%;
+    padding-top: 64px;
+}
+
+.scrollRevealContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
